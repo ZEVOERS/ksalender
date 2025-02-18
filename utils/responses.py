@@ -13,6 +13,7 @@ USER_NOT_FOUND_IN_DB = HTTPException(status_code=402, detail="User not found in 
 INVALID_SESSION = HTTPException(status_code=401, detail="Invalid session")
 DB_NOT_FOUND = HTTPException(status_code=404, detail="DB not found")
 THREAD_NOT_FOUND = HTTPException(status_code=404, detail="Thread not found")
+SCHEDULE_NOT_FOUND = HTTPException(status_code=404, detail="Schedule not found")
 
 
 def convertJsonFromSql(obj):
