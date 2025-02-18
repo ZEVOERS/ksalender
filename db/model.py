@@ -11,12 +11,14 @@ from sqlalchemy import (
 )
 from db.connection import Base
 
-# example:
-# class Cafe(Base):
-#     __tablename__ = "db"
 
-#     id = Column(Integer, primary_key=True, autoincrement=True)
-#     name = Column(VARCHAR(120), nullable=False)
-#     is_mkofficial = Column(Boolean, nullable=False, default=False)
-#     created_at = Column(DATETIME, nullable=False, default=func.now())
-#     is_deleted = Column(Boolean, nullable=False, default=False)
+class Schedules(Base):
+    __tablename__ = "schedules"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    author = Column(VARCHAR(60), nullable=False)
+    uploaded_at = Column(DATETIME, nullable=False, default=func.now())
+    title = Column(VARCHAR(900), nullable=False)
+    starts_at = Column(DATETIME, nullable=False, default=func.now())
+    ends_at = Column(DATETIME, nullable=False, default=func.now())
+    content = Column(VARCHAR(9000), nullable=False)
